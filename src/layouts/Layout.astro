@@ -1,0 +1,25 @@
+---
+// Layout.astro
+import Head from '../components/Head.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<Head />
+		<script type="module">
+			document.addEventListener('DOMContentLoaded', () => {
+			  const n = document.documentElement;
+			  const t = " w-mod-";
+			  n.className += t + "js";
+			  if ("ontouchstart" in window || navigator.maxTouchPoints) { n.className += t + "touch"; }
+			});
+		</script>
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>
