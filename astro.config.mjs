@@ -1,4 +1,3 @@
-import  SpeedInsights  from "@vercel/speed-insights/astro"
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel/static';
  
