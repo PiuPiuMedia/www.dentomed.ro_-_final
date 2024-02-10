@@ -16,11 +16,11 @@ import Footer from '../components/Footer.astro';
 			  if ("ontouchstart" in window || navigator.maxTouchPoints) { n.className += t + "touch"; }
 			});
 		</script>
-		<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
 	</head>
 	<body>
 		<Navbar />
 		<slot />
 		<Footer />
+		<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
 	</body>
 </html>

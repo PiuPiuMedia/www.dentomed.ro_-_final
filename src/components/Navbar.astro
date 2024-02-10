@@ -1,10 +1,4 @@
----
-// Import the necessary hooks from Astro
-import { html } from 'htm/preact';
-import { useState } from 'haunted';
----
-
-<div class="navbar w-nav" role="banner">
+<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="3952a8c0-04d3-aaa1-54fd-2cb892c097fa" role="banner" data-no-scroll="1" data-duration="400">
   <div class="container-navbar">
     <div class="left-nav-bar">
       <a href="/" aria-current="page" class="link-brand-navbar w-inline-block w--current">
@@ -16,25 +10,23 @@ import { useState } from 'haunted';
       <nav role="navigation" class="nav-menu w-nav-menu">
         <a href="/" class="nav-link w-nav-link">Acasa</a>
         <a href="/despre" class="nav-link w-nav-link">Despre Dentomed</a>
-        <div class="nav-link w-nav-link"  
-         @mouseenter=${() => setShowSubMenu(true)}  
-         @mouseleave=${() => setShowSubMenu(false)}
-         aria-haspopup="true">
-          <a href="/servicii">Servicii</a>
-          ${showSubMenu ? html`<ul class="submenu" aria-labelledby="services-link">
-              <li><a href="/servicii/dsd">DSD</a></li>
-              <li><a href="/servicii/fatete-dentare">Fațete dentare</a></li>
-              <li><a href="/servicii/estetica-dentara">Estetică dentară</a></li>
-              <li><a href="/servicii/odontologie">Odontologie</a></li>
-              <li><a href="/servicii/ortodontie">Ortodontie</a></li>
-              <li><a href="/servicii/endodontie">Endodonție</a></li>
-              <li><a href="/servicii/parodontologie-laser">Parodontologie LASER</a></li>
-              <li><a href="/servicii/tratamente-laser">Tratamente cu laser</a></li>
-              <li><a href="/servicii/pedodontie">Pedodonție</a></li>
-              <li><a href="/servicii/protetica">Protetică dentară</a></li>
-              <li><a href="/servicii/implantologie">Implantologie</a></li>
-              <li><a href="/servicii/dinti-ficsi-24h">Dinți ficși în  24h</a></li>
-            </ul>` : ''}
+        <div class="nav-link w-nav-link">
+          <a href="/servicii" id="services-link">Servicii</a>
+          <span id="toggle-submenu" style="cursor: pointer;">+</span>
+          <ul class="submenu">
+            <li><a href="/servicii/dsd">DSD</a></li>
+            <li><a href="/servicii/fatete-dentare">Fațete dentare</a></li>
+            <li><a href="/servicii/estetica-dentara">Estetică dentară</a></li>
+            <li><a href="/servicii/odontologie">Odontologie</a></li>
+            <li><a href="/servicii/ortodontie">Ortodontie</a></li>
+            <li><a href="/servicii/endodontie">Endodonție</a></li>
+            <li><a href="/servicii/parodontologie-laser">Parodontologie LASER</a></li>
+            <li><a href="/servicii/tratamente-laser">Tratamente cu laser</a></li>
+            <li><a href="/servicii/pedodontie">Pedodonție</a></li>
+            <li><a href="/servicii/protetica">Protetică dentară</a></li>
+            <li><a href="/servicii/implantologie">Implantologie</a></li>
+            <li><a href="/servicii/dinti-ficsi-24h">Dinți ficși în 24h</a></li>
+          </ul>
         </div>
         <a href="/preturi" class="nav-link w-nav-link">Preturi</a>
         <a href="/contact" class="nav-link w-nav-link">Contact</a>
@@ -54,47 +46,21 @@ import { useState } from 'haunted';
 </div>
 
 <style>
-/* Submenu styles */
-.submenu {
-  display: none; /* Hidden by default */
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width:  160px;
-  box-shadow:  0px  8px  16px  0px rgba(0,0,0,0.2);
-  z-index:  1;
-}
-
-/* Display submenu on hover */
-.nav-link:hover .submenu {
-  display: block;
-}
-
-.submenu li a {
-  color: black;
-  padding:  12px  16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* You might need to adjust the styles based on your actual site design */
-</style>
-
-<script>
-  function Component() {
-    const [showSubMenu, setShowSubMenu] = useState(false);
-
-    return html`
-      <div class="nav-link w-nav-link"  
-        @mouseenter=${() => setShowSubMenu(true)}  
-        @mouseleave=${() => setShowSubMenu(false)}
-        aria-haspopup="true">
-        <a href="/servicii">Servicii</a>
-        ${showSubMenu ? html`<ul class="submenu" aria-labelledby="services-link">
-          <li><a href="/servicii/dsd">DSD</a></li>
-          <!-- Add the rest of your links here -->
-        </ul>` : ''}
-      </div>`;
+  /* Submenu hidden by default, with shared styles for all devices */
+  .submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
 
-  customElements.define('my-component', Component);
-</script>
+  /* Display submenu on hover for wider screens */
+  @media (min-width: 769px) {
+    .nav-link.w-nav-link:hover .submenu,
+    .nav-link.w-nav-link:focus-within .submenu {
+      display: block;
+    }
+  }
+</style>
