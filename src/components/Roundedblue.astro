@@ -1,58 +1,23 @@
 ---
 // Your Astro component imports
 import Wap1 from '../components/Wap1.astro';
+import Tel1 from '../components/Tel1.astro';
 import Wap2 from '../components/Wap2.astro';
+import Tel2 from '../components/Tel2.astro';
 ---
 
 <section class="section rounded-blue">
     <div class="w-layout-blockcontainer main-container w-container">
         <div class="wrap-contact-text">
-            <h2 class="text-get-in-touch">Programati o vizita</h2>
-            <div class="buttons-container" style="display: flex; align-items: center; gap: 10px;">
-                <!-- Wap1 Button Wrapper -->
-                <div class="button-wrapper" style="flex: 1;">
-                    <Wap1 class="contact-button" />
-                </div>
-                <!-- Phone Button Wrapper -->
-                <div class="button-wrapper" style="flex: 1;">
-                    <a href="tel:40787389952" class="contact-button cta-white footer-cta w-button">
-                        <div class="font-icon margin-right">  </div> 
-                        40787389952
-                    </a>
-                </div>
-            </div>
-            <div class="buttons-container" style="display: flex; align-items: center; gap: 10px;">
-                <!-- Wap1 Button Wrapper -->
-                <div class="button-wrapper" style="flex: 1;">
-                    <Wap2 class="contact-button" />
-                </div>
-                <!-- Phone Button Wrapper -->
-                <div class="button-wrapper" style="flex: 1;">
-                    <a href="tel:+40787681941" class="contact-button cta-white footer-cta w-button">
-                        <div class="font-icon margin-right">  </div> 
-                        40787681941
-                    </a>
+            <h2 class="text-get-in-touch">Programati o consultatie</h2>
+            <div class="buttons-container" style="display: flex; align-items: center; gap: 30px;">
+                <div>
+                    <Tel1 />
+                    <Wap1 /><br/>
+                    <Tel2 />
+                    <Wap2 />
                 </div>
             </div>
         </div> 
     </div>
 </section>
-
-<style>
-    .buttons-container .button-wrapper {
-        /* Set a specific height for the buttons' wrappers */
-        height: 79px; /* Adjust as needed */
-    }
-    .contact-button {
-        /* Apply same height, padding, and font styles to all buttons */
-        height: 79px; /* This ensures buttons have the same height */
-        padding: 20px; /* Adjust padding as needed */
-        font-size: 36px; /* Adjust font size as needed */
-        display: flex; /* Use flex to vertically center content */
-        align-items: center; /* Center content vertically */
-        justify-content: center; /* Center content horizontally */
-        border-radius: 16px; /* Adjust border-radius as needed */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    }
-</style>
-
