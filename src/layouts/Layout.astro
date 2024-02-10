@@ -21,6 +21,18 @@ import Footer from '../components/Footer.astro';
 		<Navbar />
 		<slot />
 		<Footer />
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+			  var menuButton = document.querySelector('.menu-button.w-nav-button');
+			  var navMenu = document.querySelector('.nav-menu.w-nav-menu');
+		  
+			  if (menuButton) {
+				menuButton.addEventListener('click', function() {
+				  navMenu.classList.toggle('is-active');
+				});
+			  }
+			});
+		</script>
 		<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
 	</body>
 </html>
