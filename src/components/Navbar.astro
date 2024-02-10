@@ -1,12 +1,8 @@
 ---
 // Import the necessary hooks from Astro
-import { createSignal } from 'solid-js';
+import { html } from 'htm/preact';
+import { useState } from 'haunted';
 ---
-
-<!-- Define a reactive state for showing the submenu -->
-<script>
-  const [showSubMenu, setShowSubMenu] = createSignal(false);
-</script>
 
 <div class="navbar w-nav" role="banner">
   <div class="container-navbar">
@@ -21,12 +17,11 @@ import { createSignal } from 'solid-js';
         <a href="/" class="nav-link w-nav-link">Acasa</a>
         <a href="/despre" class="nav-link w-nav-link">Despre Dentomed</a>
         <div class="nav-link w-nav-link"  
-         @mouseenter={() => setShowSubMenu(true)}  
-         @mouseleave={() => setShowSubMenu(false)}
+         @mouseenter=${() => setShowSubMenu(true)}  
+         @mouseleave=${() => setShowSubMenu(false)}
          aria-haspopup="true">
           <a href="/servicii">Servicii</a>
-          {@html showSubMenu() ? (
-            <ul class="submenu" aria-labelledby="services-link">
+          ${showSubMenu ? html`<ul class="submenu" aria-labelledby="services-link">
               <li><a href="/servicii/dsd">DSD</a></li>
               <li><a href="/servicii/fatete-dentare">Fațete dentare</a></li>
               <li><a href="/servicii/estetica-dentara">Estetică dentară</a></li>
@@ -39,8 +34,7 @@ import { createSignal } from 'solid-js';
               <li><a href="/servicii/protetica">Protetică dentară</a></li>
               <li><a href="/servicii/implantologie">Implantologie</a></li>
               <li><a href="/servicii/dinti-ficsi-24h">Dinți ficși în  24h</a></li>
-            </ul>
-          ) : ''}
+            </ul>` : ''}
         </div>
         <a href="/preturi" class="nav-link w-nav-link">Preturi</a>
         <a href="/contact" class="nav-link w-nav-link">Contact</a>
@@ -84,3 +78,23 @@ import { createSignal } from 'solid-js';
 
 /* You might need to adjust the styles based on your actual site design */
 </style>
+
+<script>
+  function Component() {
+    const [showSubMenu, setShowSubMenu] = useState(false);
+
+    return html`
+      <div class="nav-link w-nav-link"  
+        @mouseenter=${() => setShowSubMenu(true)}  
+        @mouseleave=${() => setShowSubMenu(false)}
+        aria-haspopup="true">
+        <a href="/servicii">Servicii</a>
+        ${showSubMenu ? html`<ul class="submenu" aria-labelledby="services-link">
+          <li><a href="/servicii/dsd">DSD</a></li>
+          <!-- Add the rest of your links here -->
+        </ul>` : ''}
+      </div>`;
+  }
+
+  customElements.define('my-component', Component);
+</script>
