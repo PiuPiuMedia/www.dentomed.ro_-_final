@@ -6,6 +6,10 @@
     "@vercel/speed-insights": "^1.0.9",
     "astro": "^4.3.2",
     "cookie": "^0.6.0",
+    "swiper": "^11.0.6",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/renderer-solid": "^0.4.2"
   }
 }

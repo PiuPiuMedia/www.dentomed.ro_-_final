@@ -1,32 +1,86 @@
 ---
-
+// Import the necessary hooks from Astro
+import { createSignal } from 'solid-js';
 ---
-<div data-animation="default" class="navbar w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" data-w-id="3952a8c0-04d3-aaa1-54fd-2cb892c097fa" role="banner" data-no-scroll="1" data-duration="400">
-    <div class="container-navbar">
-        <div class="left-nav-bar">
-            <a href="/" aria-current="page" class="link-brand-navbar w-inline-block w--current">
-                <img src="/images/logo.svg" loading="lazy" width="Auto" height="30" alt="" class="image-brand-nav"/>
-                <div class="brand-navbar">Clinica DentoMed</div>
-            </a>
-        </div>
-        <div class="right-navbar">
-            <nav role="navigation" class="nav-menu w-nav-menu">
-                <a href="/" class="nav-link w-nav-link">Acasa</a>
-                <a href="/despre" class="nav-link w-nav-link">Despre Dentomed</a>
-                <a href="/servicii" class="nav-link w-nav-link">Servicii</a>
-                <a href="/preturi" class="nav-link w-nav-link">Preturi</a>
-                <a href="/contact" class="nav-link w-nav-link">Contact</a>
-                <a href="tel:+40787389952" class="cta-dark nav-cta w-button">
-                    <span class="font-icon white margin-right"></span>
-                    Suna pentru Programare
-                </a>
-            </nav>
-            <div class="menu-button w-nav-button">
-                <div class="wrap-menu-button">
-                    <div class="line-menu first-line"></div>
-                    <div class="line-menu second-line"></div>
-                </div>
-            </div>
-        </div>
+
+<!-- Define a reactive state for showing the submenu -->
+<script>
+  const [showSubMenu, setShowSubMenu] = createSignal(false);
+</script>
+
+<div class="navbar w-nav" role="banner">
+  <div class="container-navbar">
+    <div class="left-nav-bar">
+      <a href="/" aria-current="page" class="link-brand-navbar w-inline-block w--current">
+        <img src="/images/logo.svg" loading="lazy" width="Auto" height="30" alt="" class="image-brand-nav"/>
+        <div class="brand-navbar">Clinica DentoMed</div>
+      </a>
     </div>
+    <div class="right-navbar">
+      <nav role="navigation" class="nav-menu w-nav-menu">
+        <a href="/" class="nav-link w-nav-link">Acasa</a>
+        <a href="/despre" class="nav-link w-nav-link">Despre Dentomed</a>
+        <div class="nav-link w-nav-link"  
+         @mouseenter={() => setShowSubMenu(true)}  
+         @mouseleave={() => setShowSubMenu(false)}
+         aria-haspopup="true">
+          <a href="/servicii">Servicii</a>
+          {@html showSubMenu() ? (
+            <ul class="submenu" aria-labelledby="services-link">
+              <li><a href="/servicii/dsd">DSD</a></li>
+              <li><a href="/servicii/fatete-dentare">Fațete dentare</a></li>
+              <li><a href="/servicii/estetica-dentara">Estetică dentară</a></li>
+              <li><a href="/servicii/odontologie">Odontologie</a></li>
+              <li><a href="/servicii/ortodontie">Ortodontie</a></li>
+              <li><a href="/servicii/endodontie">Endodonție</a></li>
+              <li><a href="/servicii/parodontologie-laser">Parodontologie LASER</a></li>
+              <li><a href="/servicii/tratamente-laser">Tratamente cu laser</a></li>
+              <li><a href="/servicii/pedodontie">Pedodonție</a></li>
+              <li><a href="/servicii/protetica">Protetică dentară</a></li>
+              <li><a href="/servicii/implantologie">Implantologie</a></li>
+              <li><a href="/servicii/dinti-ficsi-24h">Dinți ficși în  24h</a></li>
+            </ul>
+          ) : ''}
+        </div>
+        <a href="/preturi" class="nav-link w-nav-link">Preturi</a>
+        <a href="/contact" class="nav-link w-nav-link">Contact</a>
+        <a href="tel:+40787389952" class="cta-dark nav-cta w-button">
+          <span class="font-icon white margin-right"></span>
+          Suna pentru Programare
+        </a>
+      </nav>
+      <div class="menu-button w-nav-button">
+        <div class="wrap-menu-button">
+          <div class="line-menu first-line"></div>
+          <div class="line-menu second-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+/* Submenu styles */
+.submenu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width:  160px;
+  box-shadow:  0px  8px  16px  0px rgba(0,0,0,0.2);
+  z-index:  1;
+}
+
+/* Display submenu on hover */
+.nav-link:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  color: black;
+  padding:  12px  16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* You might need to adjust the styles based on your actual site design */
+</style>
