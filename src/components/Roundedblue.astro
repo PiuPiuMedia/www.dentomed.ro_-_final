@@ -1,21 +1,27 @@
 ---
 // Your Astro component imports
 import Wap1 from '../components/Wap1.astro';
-import Tel1 from '../components/Tel1.astro';
 import Wap2 from '../components/Wap2.astro';
-import Tel2 from '../components/Tel2.astro';
 ---
 
 <section class="section rounded-blue">
     <div class="w-layout-blockcontainer main-container w-container">
         <div class="wrap-contact-text">
             <h2 class="text-get-in-touch">Programeaza o consultatie</h2>
-            <div class="buttons-container" style="display: flex; align-items: center; gap: 30px;">
-                <div>
-                    <Tel1 />
-                    <Wap1 /><br/>
-                    <Tel2 />
-                    <Wap2 /><br/>
+            <div class="contact-info-container" style="display: flex; flex-direction: column; gap: 10px;">
+                <!-- Stack for phone numbers -->
+                <div class="phone-numbers" style="display: flex; flex-direction: column; gap: 5px;">
+                    <h2 class="link-contact-thirds">
+                        <a href="tel:+40787389952">+40 787 389 952</a>
+                    </h2>
+                    <h2 class="link-contact-thirds">
+                        <a href="tel:+40787681941">+40 787 681 941</a>
+                    </h2>
+                </div>
+                <!-- Stack for WhatsApp buttons -->
+                <div class="whatsapp-buttons" style="display: flex; flex-direction: column; gap: 5px;">
+                    <Wap1 />
+                    <Wap2 />
                 </div>
             </div>
         </div> 
