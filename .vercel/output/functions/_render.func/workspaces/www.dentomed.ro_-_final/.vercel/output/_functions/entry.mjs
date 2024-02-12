@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_RtxM4n3y.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_2zVWaYdI.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_xoNDJdDN.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, l as ResponseSentError, n as MiddlewareNoDataOrNextCalled, o as MiddlewareNotAResponse, G as GetStaticPathsRequired, p as InvalidGetStaticPathsReturn, q as InvalidGetStaticPathsEntry, t as GetStaticPathsExpectedParams, u as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, v as PrerenderDynamicEndpointPathCollide, w as LocalsNotAnObject, x as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, y as renderEndpoint, z as ReservedSlotName, B as renderSlotToString, D as renderJSX, F as chunkToString, H as CantRenderPage, J as renderPage$1, K as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_ffUL0nYT.mjs';
@@ -2205,10 +2205,10 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_hVPQZwO2.mjs');
-const _page1 = () => import('./chunks/index_SMVyNG0H.mjs');
+const _page1 = () => import('./chunks/index_OLhACy6x.mjs');
 const _page2 = () => import('./chunks/contact_C1Fms794.mjs');
 const _page3 = () => import('./chunks/despre_fXpukZTu.mjs');
-const _page4 = () => import('./chunks/dsd_SYW5f7zJ.mjs');
+const _page4 = () => import('./chunks/dsd_BQJMT8vV.mjs');
 const _page5 = () => import('./chunks/preturi_uCgBacvk.mjs');
 const _page6 = () => import('./chunks/servicii_8Bo-6v_l.mjs');
 const _page7 = () => import('./chunks/tratamente-laser_CZ6W4JVc.mjs');
@@ -2229,7 +2229,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "ed1d9cf1-8379-4591-b212-e77df557458f"
+    "middlewareSecret": "c7ab6edd-541a-4b2a-a958-12e3fd24244e"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
