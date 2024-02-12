@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_fVIynxQW.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_795B6tQX.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_xoNDJdDN.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, l as ResponseSentError, n as MiddlewareNoDataOrNextCalled, o as MiddlewareNotAResponse, G as GetStaticPathsRequired, p as InvalidGetStaticPathsReturn, q as InvalidGetStaticPathsEntry, t as GetStaticPathsExpectedParams, u as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, v as PrerenderDynamicEndpointPathCollide, w as LocalsNotAnObject, x as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, y as renderEndpoint, z as ReservedSlotName, B as renderSlotToString, D as renderJSX, F as chunkToString, H as CantRenderPage, J as renderPage$1, K as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_ffUL0nYT.mjs';
@@ -2205,7 +2205,7 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_hVPQZwO2.mjs');
-const _page1 = () => import('./chunks/index_OLhACy6x.mjs');
+const _page1 = () => import('./chunks/index_neG4Nmha.mjs');
 const _page2 = () => import('./chunks/contact_C1Fms794.mjs');
 const _page3 = () => import('./chunks/despre_fXpukZTu.mjs');
 const _page4 = () => import('./chunks/dsd_BQJMT8vV.mjs');
@@ -2229,7 +2229,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "dd083820-0c0a-4bb0-b9d2-9dceddf5db2a"
+    "middlewareSecret": "4c987711-2ba7-4304-aefb-93b4c64b1455"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
