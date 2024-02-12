@@ -21,15 +21,10 @@
     kleur "^4.1.5"
     yargs "^17.7.2"
 
-"@astrojs/compiler@^2.4.0":
+"@astrojs/compiler@^2.4.0", "@astrojs/compiler@^2.5.3":
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/@astrojs/compiler/-/compiler-2.5.3.tgz#eb34fa21cbd395f2b5493aa06d91dd9e9faf3bc2"
   integrity sha512-jzj01BRv/fmo+9Mr2FhocywGzEYiyiP2GVHje1ziGNU6c97kwhYGsnvwMkHrncAy9T9Vi54cjaMK7UE4ClX4vA==
-
-"@astrojs/compiler@^2.5.0":
-  version "2.5.2"
-  resolved "https://registry.npmjs.org/@astrojs/compiler/-/compiler-2.5.2.tgz"
-  integrity sha512-fm9HNYu1tVnJjZYHE+SdDM5k6fZKNPXS9PwT43Mf6l4HVGx8d1jQwhGQqCvLkYJJBwQ9OysiexFMt7wtNuXhmQ==
 
 "@astrojs/internal-helpers@0.2.1":
   version "0.2.1"
@@ -1012,12 +1007,12 @@ array-iterate@^2.0.0:
   resolved "https://registry.npmjs.org/array-iterate/-/array-iterate-2.0.1.tgz"
   integrity sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==
 
-astro@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.npmjs.org/astro/-/astro-4.3.2.tgz"
-  integrity sha512-SJotHzKG/I32ruYWItMRJjtmNQh14mVS7kahu3XfYyxvo6nx08PGJBTSPbqPrW1sjeQPHwcpVDFx3yMMK2kaxQ==
+astro@^4.3.6:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.3.6.tgz#bdbbdf2cdccec79d07a0a2e12afd2d637f2819cb"
+  integrity sha512-VYJGsBygMtPM/qTRgn5QdxkSILgjpW2uHVw3snp/Gkl+N9uRAAnuYxrUO7wkbLejfrmlb0nZyyKG+H5VDQPbeg==
   dependencies:
-    "@astrojs/compiler" "^2.5.0"
+    "@astrojs/compiler" "^2.5.3"
     "@astrojs/internal-helpers" "0.2.1"
     "@astrojs/markdown-remark" "4.2.1"
     "@astrojs/telemetry" "3.0.4"
@@ -1070,7 +1065,8 @@ astro@^4.3.2:
     resolve "^1.22.4"
     semver "^7.5.4"
     server-destroy "^1.0.1"
-    shikiji "^0.9.18"
+    shikiji "^0.9.19"
+    shikiji-core "^0.9.19"
     string-width "^7.0.0"
     strip-ansi "^7.1.0"
     tsconfck "^3.0.0"
@@ -3524,12 +3520,12 @@ shebang-regex@^3.0.0:
   resolved "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
-shikiji-core@0.9.19:
+shikiji-core@0.9.19, shikiji-core@^0.9.19:
   version "0.9.19"
   resolved "https://registry.npmjs.org/shikiji-core/-/shikiji-core-0.9.19.tgz"
   integrity sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==
 
-shikiji@^0.9.18:
+shikiji@^0.9.18, shikiji@^0.9.19:
   version "0.9.19"
   resolved "https://registry.npmjs.org/shikiji/-/shikiji-0.9.19.tgz"
   integrity sha512-Kw2NHWktdcdypCj1GkKpXH4o6Vxz8B8TykPlPuLHOGSV8VkhoCLcFOH4k19K4LXAQYRQmxg+0X/eM+m2sLhAkg==
