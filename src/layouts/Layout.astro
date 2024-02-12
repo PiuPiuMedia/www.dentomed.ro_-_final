@@ -1,8 +1,7 @@
 ---
-// Layout.astro
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import SpeedInsights from '@vercel/speed-insights/astro';
 import Head from '../components/Head.astro';
-import SpeedInsights from "@vercel/speed-insights/astro";
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -18,11 +17,33 @@ import Footer from '../components/Footer.astro';
 			  if ("ontouchstart" in window || navigator.maxTouchPoints) { n.className += t + "touch"; }
 			});
 		</script>
-		<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
+		<script is:inline>
+			function speedInsightsBeforeSend(data){
+			  console.log("Speed Insights before send", data)
+			  return data;
+			}
+		</script>
+		<speedInsightsBeforeSend />
+		<SpeedInsights client:load />
 	</head>
 	<body>
 		<Navbar />
 		<slot />
+		<slot />
+		<slot />
 		<Footer />
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+			  var menuButtdocument, querySelector('.menu-button.w-nav-button');
+			  var navMenu = document.querySelector('.nav-menu.w-nav-menu');
+		  
+			  if (menuButton) {
+				menuButton.addEventListener('click', function() {
+				  navMenu.classList.toggle('is-active');
+				});
+			  }
+			});
+		</script>
+		<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
 	</body>
 </html>

@@ -1,53 +1,59 @@
 ---
-
+import Wap1 from '../components/Wap1.astro';
+import Wap2 from '../components/Wap2.astro';
 ---
-<section class="section rounded-black footer-section">
-  <div class="w-layout-blockcontainer main-container w-container">
-    <div class="top-footer hide-on-desktop">
-    <a href="/" aria-current="page" class="brand-link-footer w-inline-block w--current">
-      <img src="/images/logo-white.svg" loading="lazy" alt="Clinica Stomotologica DentoMed Logo" height="80"/>
-      <div class="brand-footer">
-        Clinica <br/>DentoMed
+
+  <section class="section rounded-black footer-section">
+    <div class="w-layout-blockcontainer main-container w-container">
+        <div class="wrap-contact-text">
+            <h2 class="text-get-in-touch">Programeaza o consultatie</h2>
+            <div class="contact-info-container" style="display: flex; flex-direction: column; gap: 10px;">
+                <!-- Stack for phone numbers -->
+                <div class="phone-numbers" style="display: flex; flex-direction: column; gap: 5px;">
+                  <h2 class="link-contact-thirds">
+                      <a href="tel:+40787389952" style="color: white;">+40 787 389 952</a>
+                  </h2>
+                  <h2 class="link-contact-thirds">
+                      <a href="tel:+40787681941" style="color: white;">+40 787 681 941</a>
+                  </h2>
+                </div>
+                <!-- Stack for WhatsApp buttons -->
+                <div class="whatsapp-buttons" style="display: flex; flex-direction: column; gap: 5px;">
+                    <Wap1 />
+                    <Wap2 />
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="divider-top-footer hide-on-desktop"></div>
+    <div class="second-footer">
+      <a href="/" aria-current="page" class="brand-link-footer hide-on-tablet w-inline-block w--current">
+        <img src="/images/logo-white.svg" loading="lazy" alt="" height="80"/>
+        <div class="brand-footer">Clinica DentoMed</div>
+      </a>
+      <div class="hide-on-tablet"></div>
+      <div class="column-footer-links">
+        <a href="/" class="link-footer">Acasa</a>
+        <a href="/despre" class="link-footer">Despre DentoMed</a>
+        <a href="/servicii" class="link-footer">Servicii</a>
+        <a href="/preturi" class="link-footer">Preturi</a>
+        <a href="/contact" class="link-footer">Contact</a>
       </div>
-    </a>  
-        <div class="right-footer">
-          <a href="tel:40787389952" class="cta-white footer-cta w-button">
-            <span class="font-icon margin-right"></span>
-            Programati o vizita
-          </a>
+      <div class="column-footer-links">
+        <div class="link-footer">
+          luni - sambata<br/>10:00 - 22:00
+        </div>
+        <div class="link-footer">
+          Vatra Luminoasa 2-24, bloc D6, <br/>scara B, apartament 50, Parter, <br/>Bucuresti, Romania
+        </div>
+        <div class="link-footer">
+          Nr. inreg instituției medicale <br/>12345678912346
         </div>
       </div>
-      <div class="divider-top-footer hide-on-desktop"></div>
-      <div class="second-footer">
-        <a href="/" aria-current="page" class="brand-link-footer hide-on-tablet w-inline-block w--current">
-          <img src="/images/logo-white.svg" loading="lazy" alt="" height="80"/>
-          <div class="brand-footer">Clinica DentoMed</div>
-        </a>
-        <div class="hide-on-tablet"></div>
-        <div class="column-footer-links">
-          <a href="/" class="link-footer">Acasa</a>
-          <a href="/tratamente-laser" class="link-footer">Tratamente Laser</a>
-          <a href="/despre" class="link-footer">Despre</a>
-          <a href="/preturi" class="link-footer">Preturi</a>
-          <a href="/servicii" class="link-footer">Servicii</a>
-          <a href="/contact" class="link-footer">Contact</a>
-        </div>
-        <div class="column-footer-links">
-          <div class="link-footer">
-            luni - sambata<br/>10:00 - 22:00
-          </div>
-          <div class="link-footer">
-            Vatra Luminoasa 2-24, bloc D6, <br/>scara B, apartament 50, Parter, <br/>Bucuresti, Romania
-          </div>
-          <div class="link-footer">
-            Nr. inreg instituției medicale <br/>12345678912346
-          </div>
-        </div>
-      </div>
-      <div class="divider-bottom-footer"></div>
-      <div class="wrap-legal-footer">
-        <div class="text-legal-footer">2024 © DentoMed</div>
-        <a href="/politica" class="text-legal-footer">politica noastra de confidențialitate</a>
-      </div>
+    </div>
+    <div class="divider-bottom-footer"></div>
+    <div class="wrap-legal-footer">
+      <div class="text-legal-footer">2024 © DentoMed</div>
+      <a href="/politica" class="text-legal-footer">politica noastra de confidențialitate</a>
     </div>
   </section>
