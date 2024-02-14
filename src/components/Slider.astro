@@ -1,0 +1,189 @@
+
+  <style>
+    *
+  .box-sizing: border-box
+
+  .bottom
+    position: fixed
+    bottom: 0
+    color: white
+    z-index: 50
+    left: 50%
+    transform: translateX(-50%)
+    -moz-transform: translateX(-50%)
+  
+    h3
+      font-weight: 300
+
+  .body
+    margin: 0
+    background: #262625
+    width: 100vw
+    height: 100vh
+
+  .div[class^="slide"]
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100vw
+    height: 100vh
+    left: 100vw
+    transform: scale(.8)
+    -moz-transform: scale(.8)
+    position: absolute
+  
+  .slide1
+    background: #FF6961
+    color: white
+  
+  .img
+    height: 30px
+    transform: rotate(-90deg)
+    -moz-transform: rotate(-90deg)
+    
+  .img2
+    height: 30px
+    margin-top: 40px
+    transform: rotate(90deg)
+    -moz-transform: rotate(90deg)
+    
+  
+  .h2
+    margin: -20px
+    color: #ae4742
+  
+  .slide2
+  background: #FDFD96
+  color: #b2b26d
+  
+  .slide3
+  background: #77DD77
+  color: #519651
+  
+  .slide4
+  background: #779ECB
+  color: #536f90
+  
+  .slide5
+  background: #FFD1DC
+  color: #b49098
+</style>
+
+.slide1.slide
+  h1 REALLY COOL SLIDER
+  h2 just scroll to try it
+.slide2.slide
+  h1 2
+.slide3.slide
+  h1 3
+.slide4.slide
+  h1 4
+.slide5.slide
+  h1 5
+  
+.controls
+  .left
+  .right.slide1.slide
+  h1 REALLY COOL SLIDER
+  h2 just scroll to try it
+.slide2.slide
+  h1 2
+.slide3.slide
+  h1 3
+.slide4.slide
+  h1 4
+.slide5.slide
+  h1 5
+  
+.controls
+  .left
+  .right
+<style/>
+
+<script>
+$(document).ready(function() {
+  
+  var count = $('[class^="slide"]').size();
+  var lastScrollTop = 0;
+  var prev = count;
+  var curr = 1;
+  var now = 8;
+  var next = 2;
+  var finished = true;
+
+  $('.slide' + curr).css("left","0");
+  $('.slide' + curr).css("transform","scale(1)");
+  $('.slide').on('mousewheel DOMMouseScroll MozMousePixelScroll', function (e) {
+    if (finished) {
+      finished = false;
+      var delta = e.originalEvent.wheelDelta;
+      console.log(delta);
+      
+      if (delta < 0) {
+        $('[class^="slide"]').css("transition","all 0.5s ease, width 0s, height 0s");
+        $('.slide' + curr).css("transform","scale(.8)");
+        $('.slide' + curr).animate({
+            step: function(now,fx) {
+              $(this).css('transform',"scale(."+now+")");
+            },
+            duration:'slow'
+        },'linear');
+        $('.slide' + curr).css("z-index","20");
+        $('.slide' + prev).css("z-index","10");
+        $('[class^="slide"]').css("transition","0s");
+        $('.slide' + next).css("left","100vw");
+        setTimeout(function() {
+          $('[class^="slide"]').css("transition","all .5s ease, width 0s, height 0s");
+          $('.slide' + next).css("left","0");
+          $('.slide' + next).css("transform","scale(1)");
+          $('.slide' + prev).css("-moz-transform","scale(1)");
+          $('.slide' + next).css("z-index","50");
+        },400);
+        setTimeout(function() {
+          curr++;
+          if (curr > count) curr = 1;
+          next++;
+          if (next > count) next = 1;
+          prev++;
+          if (prev > count) prev = 1;
+        },900);
+      } else if (delta > 0) {
+
+        $('.slide' + curr).css("transition","all 0.5s ease, width 0s, height 0s");
+        $('.slide' + curr).css("transform","scale(.8)");
+        $('.slide' + curr).animate({
+            step: function(now,fx) {
+              $(this).css('transform',"scale(."+now+")");
+            },
+            duration:'slow'
+        },'linear');
+        $('.slide' + curr).css("z-index","20");
+        $('.slide' + next).css("z-index","10");
+        $('[class^="slide"]').css("transition","0s");
+        $('.slide' + prev).css("left","-100vw");
+        setTimeout(function() {
+          
+          $('[class^="slide"]').css("transition","all 0.5s ease, width 0s, height 0s");
+          $('.slide' + prev).css("left","0");
+          $('.slide' + prev).css("transform","scale(1)");
+          $('.slide' + prev).css("-moz-transform","scale(1)");
+          $('.slide' + prev).css("z-index","50");
+        },400);
+        setTimeout(function() {
+          curr--;
+          if (curr < 1) curr = count;
+          next--;
+          if (next < 1) next = count;
+          prev--;
+          if (prev < 1) prev = count;
+        },900);
+      }
+
+      setTimeout(function() {
+        finished = true;
+      },1100);
+    }
+  });
+});
+</script>
