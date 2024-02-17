@@ -1,11 +1,11 @@
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
 import vercel from '@astrojs/vercel/serverless';
-import netlify from "@astrojs/netlify";
+import react from '@astrojs/react';
 
-// https://astro.build/config
+import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless';
+
 export default defineConfig({
-  renderers: [react()],
   output: 'server',
-  adapter: netlify()
+  adapter: vercel(),
 });
