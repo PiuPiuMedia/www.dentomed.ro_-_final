@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel/serverless';
-import sanity from "@sanity/astro";
 import react from "@astrojs/react";
+
+import jopSoftwarecookieconsent from "@jop-software/astro-cookieconsent";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
   adapter: vercel(),
-  integrations: [sanity(), react()]
+  integrations: [react(), jopSoftwarecookieconsent()]
 });
