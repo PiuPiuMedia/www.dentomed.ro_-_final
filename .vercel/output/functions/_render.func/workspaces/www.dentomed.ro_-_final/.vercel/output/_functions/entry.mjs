@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_KRJ4uOEt.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_TERmGShy.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_9YgOcYDi.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, k as ResponseSentError, l as MiddlewareNoDataOrNextCalled, n as MiddlewareNotAResponse, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, u as PrerenderDynamicEndpointPathCollide, v as LocalsNotAnObject, w as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, x as renderEndpoint, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, D as chunkToString, F as CantRenderPage, H as renderPage$1, J as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_Jbi09sDw.mjs';
@@ -2205,22 +2205,26 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_sNABk5KO.mjs');
-const _page1 = () => import('./chunks/index_N4hWxppq.mjs');
-const _page2 = () => import('./chunks/contact_LnNFTEWn.mjs');
-const _page3 = () => import('./chunks/despre_hVTzAoLu.mjs');
-const _page4 = () => import('./chunks/dsd_tGUaAd_K.mjs');
-const _page5 = () => import('./chunks/preturi_7r84V2J0.mjs');
-const _page6 = () => import('./chunks/servicii_At5F_YoV.mjs');
-const _page7 = () => import('./chunks/tratamente-laser_xLbzW7_y.mjs');
+const _page1 = () => import('./chunks/index_XWOjUhSb.mjs');
+const _page2 = () => import('./chunks/contact_j5bwEABC.mjs');
+const _page3 = () => import('./chunks/despre_6WKmwkFV.mjs');
+const _page4 = () => import('./chunks/dsd_9ANnANDk.mjs');
+const _page5 = () => import('./chunks/estetica_vY6sAvC8.mjs');
+const _page6 = () => import('./chunks/ortodontie_IVIueA84.mjs');
+const _page7 = () => import('./chunks/preturi_xHuuGZZY.mjs');
+const _page8 = () => import('./chunks/servicii_V6XZWyqK.mjs');
+const _page9 = () => import('./chunks/tratamente-laser_v3_kMKmH.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/index.astro", _page1],
     ["src/pages/contact.astro", _page2],
     ["src/pages/despre.astro", _page3],
     ["src/pages/dsd.astro", _page4],
-    ["src/pages/preturi.astro", _page5],
-    ["src/pages/servicii.astro", _page6],
-    ["src/pages/tratamente-laser.astro", _page7]
+    ["src/pages/estetica.astro", _page5],
+    ["src/pages/ortodontie.astro", _page6],
+    ["src/pages/preturi.astro", _page7],
+    ["src/pages/servicii.astro", _page8],
+    ["src/pages/tratamente-laser.astro", _page9]
 ]);
 
 const _manifest = Object.assign(manifest, {
@@ -2229,7 +2233,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "58dae3de-3bc5-467e-9834-c0e1a2ece0c7"
+    "middlewareSecret": "7758e1e9-d013-484f-a963-3f4decb76d4d"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;

@@ -32,6 +32,14 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^\\/estetica\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/ortodontie\\/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^\\/preturi\\/?$",
 			"dest": "_render"
 		},
