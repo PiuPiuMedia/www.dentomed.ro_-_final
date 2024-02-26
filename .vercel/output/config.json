@@ -20,7 +20,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/contact\\/?$",
+			"src": "^\\/blog\\/?$",
 			"dest": "_render"
 		},
 		{
@@ -36,11 +36,51 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^\\/endodontie\\/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^\\/estetica\\/?$",
 			"dest": "_render"
 		},
 		{
+			"src": "^\\/fatete-dentare\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/galerie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/implantologie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/odontologie\\/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^\\/ortodontie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/parodontologie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/pedodontie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/politica-cookie\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/politica-de-calitate\\/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^\\/politica-de-confidentialitate\\/?$",
 			"dest": "_render"
 		},
 		{
@@ -52,11 +92,15 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^\\/protetica\\/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^\\/servicii\\/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/servicii1\\/?$",
+			"src": "^\\/termeni-si-conditii\\/?$",
 			"dest": "_render"
 		},
 		{

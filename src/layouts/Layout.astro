@@ -1,8 +1,5 @@
 ---
 import SpeedInsights from '@vercel/speed-insights/astro';
-import Head from '../components/Head.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
 ---
 
 		<head>
@@ -22,27 +19,9 @@ import Footer from '../components/Footer.astro';
 		</script>
 		<speedInsightsBeforeSend />
 		<SpeedInsights client:load />
-
-		<script type="text/javascript">
-			document.addEventListener('DOMContentLoaded', function() {
-			  var menuButtdocument, querySelector;'.menu-button.w-nav-button';
-			  var navMenu = document.querySelector;'.nav-menu.w-nav-menu';
-		  
-			  if (menuButton) {
-				menuButton.addEventListener('click', function() {
-				  navMenu.classList.toggle('is-active');
-				});
-			  }
-			});
-		</script>
 		</head>
 		<body>
 		<slot />
-		<slot />
-		<slot />
-		<Footer />
-		
 	</body>
-	<style>.wf-force-outline-none[tabindex="-1"]:focus { outline: none; }</style>
 </html>
 
