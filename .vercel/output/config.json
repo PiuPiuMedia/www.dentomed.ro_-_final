@@ -28,6 +28,10 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^\\/dinti-ficsi-24h\\/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^\\/dsd\\/?$",
 			"dest": "_render"
 		},
