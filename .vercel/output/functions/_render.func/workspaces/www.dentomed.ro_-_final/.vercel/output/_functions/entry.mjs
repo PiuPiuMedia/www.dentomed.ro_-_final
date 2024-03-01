@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_cAVYuwKN.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_A0P7Pcnm.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_9YgOcYDi.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, k as ResponseSentError, l as MiddlewareNoDataOrNextCalled, n as MiddlewareNotAResponse, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, u as PrerenderDynamicEndpointPathCollide, v as LocalsNotAnObject, w as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, x as renderEndpoint, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, D as chunkToString, F as CantRenderPage, H as renderPage$1, J as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_Jbi09sDw.mjs';
@@ -2210,7 +2210,7 @@ const _page2 = () => import('./chunks/blog_VOgOAU5F.mjs');
 const _page3 = () => import('./chunks/despre_jSjKJ44U.mjs');
 const _page4 = () => import('./chunks/dinti-ficsi-24h_ybWDQDAb.mjs');
 const _page5 = () => import('./chunks/dsd_y_NHlT8f.mjs');
-const _page6 = () => import('./chunks/echipa_Lh-wObK4.mjs');
+const _page6 = () => import('./chunks/echipa_gP874BF3.mjs');
 const _page7 = () => import('./chunks/endodontie_-yS4tfMX.mjs');
 const _page8 = () => import('./chunks/estetica_WrQMPscD.mjs');
 const _page9 = () => import('./chunks/fatete-dentare_VHlYm5Zl.mjs');
@@ -2263,7 +2263,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "eb77cea1-bbc2-4732-8dd9-d3ab758a09e1"
+    "middlewareSecret": "098e7c72-a09d-4017-958a-7ba28b21318b"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
