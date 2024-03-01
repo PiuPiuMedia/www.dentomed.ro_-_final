@@ -36,10 +36,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/dsd1\\/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^\\/echipa\\/?$",
 			"dest": "_render"
 		},
@@ -52,15 +48,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/estetica1\\/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^\\/fatete-dentare\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/fatete-dentare1\\/?$",
 			"dest": "_render"
 		},
 		{

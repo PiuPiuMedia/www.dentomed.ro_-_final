@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_OFV8PVGa.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_nMX34SEX.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_9YgOcYDi.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, k as ResponseSentError, l as MiddlewareNoDataOrNextCalled, n as MiddlewareNotAResponse, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, u as PrerenderDynamicEndpointPathCollide, v as LocalsNotAnObject, w as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, x as renderEndpoint, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, D as chunkToString, F as CantRenderPage, H as renderPage$1, J as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_Jbi09sDw.mjs';
@@ -2205,33 +2205,30 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_sNABk5KO.mjs');
-const _page1 = () => import('./chunks/index_wmkWX0ar.mjs');
+const _page1 = () => import('./chunks/index_6rkP3GKS.mjs');
 const _page2 = () => import('./chunks/blog_VOgOAU5F.mjs');
 const _page3 = () => import('./chunks/despre_jSjKJ44U.mjs');
-const _page4 = () => import('./chunks/dinti-ficsi-24h_tT8StEVI.mjs');
-const _page5 = () => import('./chunks/dsd_QhyJPxCz.mjs');
-const _page6 = () => import('./chunks/dsd1_HpVLdCNm.mjs');
-const _page7 = () => import('./chunks/echipa_7aA6Hgfz.mjs');
-const _page8 = () => import('./chunks/endodontie_09hPPymo.mjs');
-const _page9 = () => import('./chunks/estetica_PSb7tiEz.mjs');
-const _page10 = () => import('./chunks/estetica1_g6f1xitM.mjs');
-const _page11 = () => import('./chunks/fatete-dentare_2bemAcMp.mjs');
-const _page12 = () => import('./chunks/fatete-dentare1_x_oUdVr7.mjs');
-const _page13 = () => import('./chunks/galerie_2gklK_Xw.mjs');
-const _page14 = () => import('./chunks/implantologie_CGO45521.mjs');
-const _page15 = () => import('./chunks/odontologie_-OUONUXT.mjs');
-const _page16 = () => import('./chunks/ortodontie_n0RluPZZ.mjs');
-const _page17 = () => import('./chunks/parodontologie_XRlbjHJ2.mjs');
-const _page18 = () => import('./chunks/pedodontie_DbIf3ULf.mjs');
-const _page19 = () => import('./chunks/politica-cookie_G2oceDBV.mjs');
-const _page20 = () => import('./chunks/politica-de-calitate_nbwG_sZ0.mjs');
-const _page21 = () => import('./chunks/politica-de-confidentialitate_Rd84NiE8.mjs');
-const _page22 = () => import('./chunks/preturi_n28cSUit.mjs');
-const _page23 = () => import('./chunks/programare_vActYBVz.mjs');
-const _page24 = () => import('./chunks/protetica_IMhKhEma.mjs');
-const _page25 = () => import('./chunks/servicii_-IW3RpoK.mjs');
-const _page26 = () => import('./chunks/termeni-si-conditii_wJ5proGZ.mjs');
-const _page27 = () => import('./chunks/tratamente-laser_PWMohMPf.mjs');
+const _page4 = () => import('./chunks/dinti-ficsi-24h_Ff7HEQKa.mjs');
+const _page5 = () => import('./chunks/dsd_NQ2q3GnG.mjs');
+const _page6 = () => import('./chunks/echipa_hPVN7HkZ.mjs');
+const _page7 = () => import('./chunks/endodontie_9zD-DofD.mjs');
+const _page8 = () => import('./chunks/estetica_hO8vLmJo.mjs');
+const _page9 = () => import('./chunks/fatete-dentare_U5DWFwxk.mjs');
+const _page10 = () => import('./chunks/galerie_jYfZYf5Y.mjs');
+const _page11 = () => import('./chunks/implantologie_WEL4pOjf.mjs');
+const _page12 = () => import('./chunks/odontologie_AT8_Jx8G.mjs');
+const _page13 = () => import('./chunks/ortodontie_oVNlZ4El.mjs');
+const _page14 = () => import('./chunks/parodontologie_6kLTRzHr.mjs');
+const _page15 = () => import('./chunks/pedodontie_q0S-mhzL.mjs');
+const _page16 = () => import('./chunks/politica-cookie_BUgp95VU.mjs');
+const _page17 = () => import('./chunks/politica-de-calitate_0Tjb0Vj6.mjs');
+const _page18 = () => import('./chunks/politica-de-confidentialitate_D99GKn_5.mjs');
+const _page19 = () => import('./chunks/preturi_oldB6OGZ.mjs');
+const _page20 = () => import('./chunks/programare_GM46sUL0.mjs');
+const _page21 = () => import('./chunks/protetica_9KuFO_-n.mjs');
+const _page22 = () => import('./chunks/servicii_C79y3Sgi.mjs');
+const _page23 = () => import('./chunks/termeni-si-conditii_jbFS7JBw.mjs');
+const _page24 = () => import('./chunks/tratamente-laser_mIgibeQd.mjs');
 const pageMap = new Map([
     ["node_modules/astro/dist/assets/endpoint/generic.js", _page0],
     ["src/pages/index.astro", _page1],
@@ -2239,28 +2236,25 @@ const pageMap = new Map([
     ["src/pages/despre.astro", _page3],
     ["src/pages/dinti-ficsi-24h.astro", _page4],
     ["src/pages/dsd.astro", _page5],
-    ["src/pages/dsd1.astro", _page6],
-    ["src/pages/echipa.astro", _page7],
-    ["src/pages/endodontie.astro", _page8],
-    ["src/pages/estetica.astro", _page9],
-    ["src/pages/estetica1.astro", _page10],
-    ["src/pages/fatete-dentare.astro", _page11],
-    ["src/pages/fatete-dentare1.astro", _page12],
-    ["src/pages/galerie.astro", _page13],
-    ["src/pages/implantologie.astro", _page14],
-    ["src/pages/odontologie.astro", _page15],
-    ["src/pages/ortodontie.astro", _page16],
-    ["src/pages/parodontologie.astro", _page17],
-    ["src/pages/pedodontie.astro", _page18],
-    ["src/pages/politica-cookie.astro", _page19],
-    ["src/pages/politica-de-calitate.astro", _page20],
-    ["src/pages/politica-de-confidentialitate.astro", _page21],
-    ["src/pages/preturi.astro", _page22],
-    ["src/pages/programare.astro", _page23],
-    ["src/pages/protetica.astro", _page24],
-    ["src/pages/servicii.astro", _page25],
-    ["src/pages/termeni-si-conditii.astro", _page26],
-    ["src/pages/tratamente-laser.astro", _page27]
+    ["src/pages/echipa.astro", _page6],
+    ["src/pages/endodontie.astro", _page7],
+    ["src/pages/estetica.astro", _page8],
+    ["src/pages/fatete-dentare.astro", _page9],
+    ["src/pages/galerie.astro", _page10],
+    ["src/pages/implantologie.astro", _page11],
+    ["src/pages/odontologie.astro", _page12],
+    ["src/pages/ortodontie.astro", _page13],
+    ["src/pages/parodontologie.astro", _page14],
+    ["src/pages/pedodontie.astro", _page15],
+    ["src/pages/politica-cookie.astro", _page16],
+    ["src/pages/politica-de-calitate.astro", _page17],
+    ["src/pages/politica-de-confidentialitate.astro", _page18],
+    ["src/pages/preturi.astro", _page19],
+    ["src/pages/programare.astro", _page20],
+    ["src/pages/protetica.astro", _page21],
+    ["src/pages/servicii.astro", _page22],
+    ["src/pages/termeni-si-conditii.astro", _page23],
+    ["src/pages/tratamente-laser.astro", _page24]
 ]);
 
 const _manifest = Object.assign(manifest, {
@@ -2269,7 +2263,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "483d7d8f-1b42-40fd-9d00-9923cfa1a1ac"
+    "middlewareSecret": "e138e545-f5ba-4df4-8c32-8b4627c91227"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
