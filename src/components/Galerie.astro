@@ -1,278 +1,779 @@
----
-
----
-<script>
-    const gallery = document.querySelector('.gallery');
-    const track = document.querySelector('.gallery-track');
-    const cards = document.querySelectorAll('.card');
-    const easing = 0.05;
-    let startY = 0;
-    let endY = 0;
-    let raf;
-    
-    const lerp = (start,end,t) => start * (1-t) + end * t;
-    
-    function updateScroll() {
-      startY = lerp(startY,endY,easing);
-      gallery.style.height = `${track.clientHeight}px`;
-      track.style.transform = `translateY(-${startY}px)`;
-      activateParallax();
-      raf = requestAnimationFrame(updateScroll);
-      if (startY.toFixed(1) === window.scrollY.toFixed(1)) cancelAnimationFrame(raf);
+<section class="section">
+  <div class="container is-full-width">
+    <div class="padding">
+      <div data-current="Tab 1" data-easing="ease" data-duration-in="300" data-duration-out="100" class="tabs-4 w-tabs">
+        <div class="tabs-4-links w-tab-menu" role="tablist"><a data-w-tab="Tab 1"
+            class="tab-4-link w-inline-block w-tab-link" id="w-tabs-0-data-w-tab-0" href="#w-tabs-0-data-w-pane-0"
+            role="tab" aria-controls="w-tabs-0-data-w-pane-0" aria-selected="false" tabindex="-1">
+            <div class="tab-4-image"><img
+                src="/images/logo-big.png"
+                loading="lazy"
+                alt="Dentomed"
+                sizes="(max-width: 1439px) 49.59375px, (max-width: 1919px) 3vw, 49.59375px" class="cover-image"></div>
+            <div class="tab-4-link-text">Echipa Dentomed</div>
+          </a><a data-w-tab="Tab 2" class="tab-4-link w-inline-block w-tab-link" id="w-tabs-0-data-w-tab-1"
+            href="#w-tabs-0-data-w-pane-1" role="tab" aria-controls="w-tabs-0-data-w-pane-1" aria-selected="false"
+            tabindex="-1">
+            <div class="tab-4-image"><img
+                src="/fatete3.PNG"
+                loading="lazy"
+                sizes="(max-width: 1439px) 49.59375px, (max-width: 1919px) 3vw, 49.59375px" class="cover-image"></div>
+            <div class="tab-4-link-text">Rezultate</div>
+          </a><a data-w-tab="Tab 3" class="tab-4-link w-inline-block w-tab-link w--current" id="w-tabs-0-data-w-tab-2"
+            href="#w-tabs-0-data-w-pane-2" role="tab" aria-controls="w-tabs-0-data-w-pane-2" aria-selected="true">
+            <div class="tab-4-image"><img
+                src="public/dental-images/pedo3.PNG"
+                loading="lazy"
+                sizes="(max-width: 1439px) 49.59375px, (max-width: 1919px) 3vw, 49.59375px" class="cover-image"></div>
+            <div class="tab-4-link-text">Pacienti</div>
+          </a></div>
+        <div class="tab-content w-tab-content">
+          <div data-w-tab="Tab 1" class="tab-pane w-tab-pane" id="w-tabs-0-data-w-pane-0" role="tabpanel"
+            aria-labelledby="w-tabs-0-data-w-tab-0" style="">
+            <div class="tab-inner with-borders">
+              <h2 class="heading is-medium-title">Echipa Dentomed</h2>
+              <div class="w-layout-grid gallery-grid-4 in-tab"><a href="#"
+                  class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr1.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileSize": 86036,
+      "height": 1280,
+      "url": "/dental-images/dr1.PNG",
+      "width": 1920,
+      "type": "image"
     }
-    
-    function startScroll() {
-      endY = window.scrollY; 
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(updateScroll);
+  ],
+  "group": "Gallery 3"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr2.PNG"
+                    loading="lazy"
+                    alt="Dentist"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileSize": 70484,
+      "height": 1280,
+      "url": "/dental-images/dr2.PNG",
+      "width": 1920,
+      "type": "image"
     }
-    
-    function parallax(card) {
-      const wrapper = card.querySelector('.card-image-wrapper');
-      const diff = card.offsetHeight - wrapper.offsetHeight;
-      const {top} = card.getBoundingClientRect();
-      const progress = top / window.innerHeight;
-      const yPos = diff * progress;
-      wrapper.style.transform = `translateY(${yPos}px)`;
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr3.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileSize": 52582,
+      "height": 1280,
+      "url": "/dental-images/dr3.PNG",
+      "width": 1920,
+      "type": "image"
     }
-    
-    const activateParallax = () => cards.forEach(parallax);
-    
-    function init() {
-      activateParallax();
-      startScroll();
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr4.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cottonbro-6501881.webp",
+      "fileName": "pexels-cottonbro-6501881.webp",
+      "fileSize": 44164,
+      "height": 1280,
+      "url": "/dental-images/dr4.PNG",
+      "width": 1920,
+      "type": "image"
     }
-    
-    window.addEventListener('load',updateScroll,false);
-    window.addEventListener('scroll',init,false);
-    window.addEventListener('resize',updateScroll,false);
-</script>
-
-<div class='gallery'>
-    <div class='gallery-track'>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/1.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/2.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/3.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/4.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/5.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/6.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/7.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/8.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/9.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/9.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/10.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/11.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/12.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/13.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/14.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/15.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/16.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/17.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/18.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/19.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/20.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/21.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/23.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/24.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/25.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-           <img src='/dental-images/26.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/27.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/28.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/29.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/30.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/31.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/32.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/33.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/34.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/35.PNG'>
-        </div>
-      </div>
-      <div class='card'>
-        <div class='card-image-wrapper'>
-          <img src='/dental-images/36.PNG'>
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr5.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileSize": 71574,
+      "height": 1280,
+      "url": "/dental-images/dr5.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr6.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileSize": 87536,
+      "height": 1280,
+      "url": "/dental-images/dr6.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dr7.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileSize": 75634,
+      "height": 1280,
+      "url": "/dental-images/dr7.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dsd3.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileSize": 93694,
+      "height": 1412,
+      "url": "/dental-images/dsd3.PNG",
+      "width": 1280,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a></div>
+            </div>
+          </div>
+          <div data-w-tab="Tab 2" class="tab-pane w-tab-pane" id="w-tabs-0-data-w-pane-1" role="tabpanel"
+            aria-labelledby="w-tabs-0-data-w-tab-1" style="">
+            <div class="tab-inner with-borders">
+              <h2 class="heading is-medium-title">Inainte &amp; Dupa</h2>
+              <div class="w-layout-grid gallery-grid-4 in-tab"><a href="#"
+                  class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/3.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileSize": 86036,
+      "height": 1280,
+      "url": "/dental-images/3.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Gallery 3"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/laser4.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileSize": 70484,
+      "height": 1280,
+      "url": "/dental-images/laser4.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/28.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileSize": 52582,
+      "height": 1280,
+      "url": "/dental-images/28.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/30.PNG"
+                    loading="lazy"
+                    alt="Klaas - Dentist website Webflow template"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cottonbro-6501881.webp",
+      "fileName": "pexels-cottonbro-6501881.webp",
+      "fileSize": 44164,
+      "height": 1280,
+      "url": "/dental-images/30.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/12.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileSize": 71574,
+      "height": 1280,
+      "url": "/dental-images/12.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/35.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileSize": 87536,
+      "height": 1280,
+      "url": "/dental-images/35.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/33.PNG"
+                    loading="lazy"
+                    alt="Klaas - Dentist website Webflow template"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileSize": 75634,
+      "height": 1280,
+      "url": "/dental-images/33.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/36.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileSize": 93694,
+      "height": 1412,
+      "url": "/dental-images/36.PNG",
+      "width": 1280,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a></div>
+            </div>
+          </div>
+          <div data-w-tab="Tab 3" class="tab-pane w-tab-pane w--tab-active" id="w-tabs-0-data-w-pane-2" role="tabpanel"
+            aria-labelledby="w-tabs-0-data-w-tab-2" style="opacity: 1; transition: opacity 300ms ease 0s;">
+            <div class="tab-inner with-borders">
+              <h2 class="heading is-medium-title">Pacienti</h2>
+              <div class="w-layout-grid gallery-grid-4 in-tab"><a href="#"
+                  class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/7.PNG"
+                    loading="lazy"
+                    alt="Klaas - Dentist website Webflow template"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269942.webp",
+      "fileSize": 86036,
+      "height": 1280,
+      "url": "/dental-images/7.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Gallery 3"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/echipa-patient.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269931.webp",
+      "fileSize": 70484,
+      "height": 1280,
+      "url": "/dental-images/echipa-patient.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/dsd5.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269681.webp",
+      "fileSize": 52582,
+      "height": 1280,
+      "url": "/dental-images/dsd5.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/pedo1.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cottonbro-6501881.webp",
+      "fileName": "pexels-cottonbro-6501881.webp",
+      "fileSize": 44164,
+      "height": 1280,
+      "url": "/dental-images/pedo1.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/paro1.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269696.webp",
+      "fileSize": 71574,
+      "height": 1280,
+      "url": "/dental-images/paro1.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/laser2.PNG"
+                    loading="lazy"
+                    alt="Dentomed"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269360.webp",
+      "fileSize": 87536,
+      "height": 1280,
+      "url": "/dental-images/laser2.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/endo-pas2.PNG"
+                    loading="lazy"
+                    alt="Klaas - Dentist website Webflow template"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileName": "pexels-polina-zimmerman-4687360.webp",
+      "fileSize": 75634,
+      "height": 1280,
+      "url": "/dental-images/endo-pas2.PNG",
+      "width": 1920,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a><a href="#" class="gallery-lightbox is-4th w-inline-block w-lightbox" aria-label="open lightbox"
+                  aria-haspopup="dialog"
+                  style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><img
+                    src="/dental-images/endo-pas3.PNG"
+                    loading="lazy"
+                    alt="Klaas - Dentist website Webflow template"
+                    sizes="(max-width: 479px) 75vw, (max-width: 767px) 77vw, (max-width: 991px) 39vw, (max-width: 1439px) 19vw, 21vw"
+                    class="gallery-thumbnail"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  <div class="gallery-background"
+                    style="display: block; transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                  </div><img
+                    src="https://assets-global.website-files.com/6303aedc6111814a316732ac/6303aedc6111819e1e673343_open_in_full_white_24dp.svg"
+                    loading="lazy" alt="" class="icon in-gallery"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; display: block;">
+                  <script type="application/json" class="w-json">{
+  "items": [
+    {
+      "_id": "example_img",
+      "origFileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileName": "pexels-cedric-fauntleroy-4269361.webp",
+      "fileSize": 93694,
+      "height": 1412,
+      "url": "/dental-images/endo-pas3.PNG",
+      "width": 1280,
+      "type": "image"
+    }
+  ],
+  "group": "Tab gallery"
+}</script>
+                </a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>  
-<style>* {
-    margin: 0;
-    padding: 0.15rem;
-    box-sizing: border-box;
-  }
-  
-  .gallery-track {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 0.15rem;
-    padding: 0.15rem;
-    will-change: transform;
-  }
-  
-  .card {
-    height: 400px;
-    overflow: hidden;
-  
-    & .card-image-wrapper {
-      height: 135%;
-      will-change: transform;
-  
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  
-  @media (width < 800px) {
-    .gallery-track {
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
-  
-  @media (width < 550px) {
-    .gallery-track {
-      grid-template-columns: repeat(1,1fr);
-    }
-  }
-</style>
+</section>

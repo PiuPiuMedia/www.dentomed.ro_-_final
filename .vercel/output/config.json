@@ -100,7 +100,7 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/reviews\\/?$",
+			"src": "^\\/recenzii\\/?$",
 			"dest": "_render"
 		},
 		{
