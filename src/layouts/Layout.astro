@@ -1,16 +1,10 @@
 ---
-import SpeedInsights from '@vercel/speed-insights/astro';
+
 ---
 
 		<head>
-		<script is:inline>
-			function speedInsightsBeforeSend(data){
-			  console.log("Speed Insights before send", data)
-			  return data;
-			}
-		</script>
-		<speedInsightsBeforeSend />
-		<SpeedInsights client:load />
+
+
 		</head>
 	</body>
 </html>
