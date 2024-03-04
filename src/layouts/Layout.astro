@@ -3,14 +3,6 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 ---
 
 		<head>
-		<script type="module">
-			document.addEventListener('DOMContentLoaded', () => {
-			  const n = document.documentElement;
-			  const t = " w-mod-";
-			  n.className += t + "js";
-			  if ("ontouchstart" in window || navigator.maxTouchPoints) { n.className += t + "touch"; }
-			});
-		</script>
 		<script is:inline>
 			function speedInsightsBeforeSend(data){
 			  console.log("Speed Insights before send", data)
@@ -20,8 +12,6 @@ import SpeedInsights from '@vercel/speed-insights/astro';
 		<speedInsightsBeforeSend />
 		<SpeedInsights client:load />
 		</head>
-		<body>
-		<slot />
 	</body>
 </html>
 
