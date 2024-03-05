@@ -1,49 +1,147 @@
 ---
-// src/components/ContactForm.astro
-import { useState } from 'react';
-
-// Function to handle form submission
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
-
-  // Replace 'YOUR_GOOGLE_APPS_SCRIPT_URL' with your actual Google Apps Script URL
-  try {
-    await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-      method: 'POST',
-      mode: 'no-cors', // Important since Google Apps Script does not support CORS
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    alert('Form submitted successfully');
-  } catch (error) {
-    console.error('Error submitting form:', error);
-    alert('Error submitting the form.');
-  }
-};
+// Your Astro component
 ---
 
-<form id="wf-form-Contact-form" name="wf-form-Contact-form" data-name="Contact form" class="form-block" aria-label="Contact form" onSubmit={handleSubmit}>
-  <input class="form-field w-input" maxlength="256" name="First-Name" placeholder="Prenume" type="text" required />
-  <input class="form-field w-input" maxlength="256" name="Last-Name" placeholder="Nume" type="text" required />
-  <input class="form-field w-input" maxlength="256" name="Form-Email" placeholder="E-mail" type="email" required />
-  <input class="form-field w-input" maxlength="256" name="Form-Phone" placeholder="Nr de Telefon" type="tel" required />
-  <select id="Patient" name="Patient" required class="form-field is-select w-select">
-    <option value="">Tip Pacient</option>
-    <option value="New patient">Pacient Nou</option>
-    <option value="Existing patient">Pacient Existent</option>
-  </select>
-  <textarea placeholder="Mesaj" id="Message" name="Message" required class="form-field is-text-area w-input"></textarea>
-  <label class="w-checkbox checkbox-field">
-    <input type="checkbox" name="Terms-And-Conditions" required style="opacity:0;position:absolute;z-index:-1" />
-    <span class="checkbox-label w-form-label">Sunt de acord cu <a href="/termeni-si-conditii" class="form-checkbox-link">Termenii de utilizare</a></span>
-  </label>
-  <label class="w-checkbox checkbox-field">
-    <input type="checkbox" name="Subscribe-To-Newsletter" required style="opacity:0;position:absolute;z-index:-1" />
-    <span class="checkbox-label w-form-label">Ma abonez la newsletter</span>
-  </label>
-  <input type="submit" data-wait="Sending..." class="form-submit-button w-button" value="Programeaza Consultatia" />
-</form>
+<div
+  id="w-node-_9194c24e-a527-33ff-c35a-52cfb4b62f03-aabd729b"
+  class="contact-grid-column-4"
+>
+  <div class="form w-form">
+    <form
+      id="wf-form-Contact-form"
+      name="wf-form-Contact-form"
+      data-name="Contact form"
+      method="POST"
+      class="form-block"
+      action="https://hook.eu2.make.com/u2fidpjzctgaeoc331obeuou79dryrxc"
+    >
+      <input
+        class="form-field w-input"
+        maxlength="256"
+        name="First-Name"
+        data-name="First Name"
+        placeholder="Prenume"
+        type="text"
+        id="First-Name-2"
+        required=""
+      /><input
+        class="form-field w-input"
+        maxlength="256"
+        name="Last-Name"
+        data-name="Last Name"
+        placeholder="Nume"
+        type="text"
+        id="Last-Name-2"
+        required=""
+      /><input
+        class="form-field w-input"
+        maxlength="256"
+        name="Form-Email"
+        data-name="Form Email"
+        placeholder="E-mail"
+        type="email"
+        id="Form-Email"
+        required=""
+      /><input
+        class="form-field w-input"
+        maxlength="256"
+        name="Form-Phone"
+        data-name="Form Phone"
+        placeholder="Nr de Telefon"
+        type="tel"
+        id="Form-Phone-2"
+        required=""
+      /><select
+        id="Patient-2"
+        name="Patient"
+        data-name="Patient"
+        required=""
+        class="form-field is-select w-select"
+      >
+        <option value="Select a patient type">Tip Pacient</option>
+        <option value="New patient">Pacient Nou</option>
+        <option value="Existing patient">Pacient Existent</option>
+      </select><textarea
+        placeholder="Mesaj"
+        maxlength="5000"
+        id="Message-2"
+        name="Message"
+        data-name="Message"
+        required=""
+        class="form-field is-text-area w-input"></textarea><label
+        class="w-checkbox checkbox-field"
+      >
+        <div
+          class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"
+        >
+        </div>
+        <input
+          id="Terms-And-Conditions"
+          type="checkbox"
+          name="Terms-And-Conditions"
+          data-name="Terms And Conditions"
+          required=""
+          style="opacity:0;position:absolute;z-index:-1"
+        /><span class="checkbox-label w-form-label" for:"Terms-And-Conditions"
+          >Sunt de acord cu <a
+            href="/termeni-si-conditii"
+            class="form-checkbox-link">Termenii de utilizare</a
+          ></span
+        >
+      </label><label class="w-checkbox checkbox-field">
+        <div
+          class="w-checkbox-input w-checkbox-input--inputType-custom checkbox"
+        >
+        </div>
+        <input
+          id="Subscribe-To-Newsletter"
+          type="checkbox"
+          name="Subscribe-To-Newsletter"
+          data-name="Subscribe To Newsletter"
+          required=""
+          style="opacity:0;position:absolute;z-index:-1"
+        /><span
+          class="checkbox-label w-form-label"
+          for:"Subscribe-To-Newsletter">Ma abonez la newsletter</span
+        >
+      </label>
+      <input type="submit" data-wait="Sending..." class="form-submit-button w-button" value="Programeaza Consultatia">
+        </form>
+        <div class="form-success-message w-form-done" tabindex="-1" role="region" aria-label="Contact form success">
+            <div class="form-success-title">Trimis!</div>
+            <p>Thank you.</p>
+        </div>
+        <div class="form-error-message w-form-fail" tabindex="-1" role="region" aria-label="Contact form failure">
+            <p class="form-error-paragraph">A avut loc o eroare<a href="#" class="form-error-link"></a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('wf-form-Contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Use Fetch API to send form data to Make.com
+    fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this)
+    })
+    .then(response => {
+        if (response.ok) {
+            // Show success message without redirecting
+            document.querySelector('.form-success-message').style.display = 'block';
+            document.querySelector('.form-error-message').style.display = 'none';
+        } else {
+            // Handle errors
+            console.error('Form submission failed');
+            document.querySelector('.form-error-message').style.display = 'block';
+            document.querySelector('.form-success-message').style.display = 'none';
+        }
+    })
+    .catch(error => {
+        console.error('There was a problem with your fetch operation:', error);
+        document.querySelector('.form-error-message').style.display = 'block';
+        document.querySelector('.form-success-message').style.display = 'none';
+    });
+});
+</script>

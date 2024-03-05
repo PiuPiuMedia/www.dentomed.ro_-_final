@@ -18,11 +18,14 @@
     "react-dom": "^18.2.0",
     "sanity": "^3.29.1",
     "swiper": "^11.0.6",
+    "tinacms": "^1.5.29",
     "typescript": "^5.3.3",
     "vanilla-cookieconsent": "^3.0.0",
     "vercel": "^33.5.3"
   },
   "devDependencies": {
-    "@astrojs/renderer-solid": "^0.4.2"
+    "@astrojs/renderer-solid": "^0.4.2",
+    "@tinacms/cli": "^1.5.40",
+    "@types/node": "^20.11.24"
   }
 }
