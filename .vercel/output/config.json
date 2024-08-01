@@ -1,119 +1,131 @@
 {
-	"version": 3,
-	"routes": [
-		{
-			"src": "^/_astro/(.*)$",
-			"headers": {
-				"cache-control": "public, max-age=31536000, immutable"
-			},
-			"continue": true
-		},
-		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "^\\/_image$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/blog\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/despre\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/dinti-ficsi-24h\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/dsd\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/echipa\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/endodontie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/estetica\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/fatete-dentare\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/galerie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/implantologie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/odontologie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/ortodontie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/parodontologie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/pedodontie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/politica-cookie\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/politica-de-calitate\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/politica-de-confidentialitate\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/preturi\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/programare\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/protetica\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/recenzii\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/servicii\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/termeni-si-conditii\\/?$",
-			"dest": "_render"
-		},
-		{
-			"src": "^\\/tratamente-laser\\/?$",
-			"dest": "_render"
-		}
-	]
+  "version": 3,
+  "routes": [
+    {
+      "src": "^/_astro/(.*)$",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "continue": true
+    },
+    {
+      "handle": "error"
+    },
+    {
+      "status": 404,
+      "src": "^(?!/api).*$",
+      "dest": "/404.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^\\/_image$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/blog\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/despre\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/dinti-ficsi-24h\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/dsd\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/echipa\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/endodontie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/estetica\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/fatete-dentare\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/galerie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/implantologie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/odontologie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/ortodontie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/parodontologie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/pedodontie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/politica-cookie\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/politica-de-calitate\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/politica-de-confidentialitate\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/preturi\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/programare\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/protetica\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/recenzii\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/servicii\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/termeni-si-conditii\\/?$",
+      "dest": "_render"
+    },
+    {
+      "src": "^\\/tratamente-laser\\/?$",
+      "dest": "_render"
+    }
+  ],
+  "framework": {
+    "version": "14.1.0"
+  },
+  "crons": []
 }

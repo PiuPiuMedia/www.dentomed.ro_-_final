@@ -1,5 +1,5 @@
 import { renderers } from './renderers.mjs';
-import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_kA5G6MT9.mjs';
+import { l as levels, g as getEventPrefix, L as Logger, A as AstroIntegrationLogger, manifest } from './manifest_bhiVSOR_.mjs';
 import 'node:fs';
 import { e as appendForwardSlash, j as joinPaths, t as trimSlashes, s as slash, p as prependForwardSlash, r as removeTrailingForwardSlash, f as collapseDuplicateSlashes } from './chunks/astro/assets-service_9YgOcYDi.mjs';
 import { R as ROUTE_DATA_SYMBOL, A as AstroError, k as ResponseSentError, l as MiddlewareNoDataOrNextCalled, n as MiddlewareNotAResponse, G as GetStaticPathsRequired, o as InvalidGetStaticPathsReturn, p as InvalidGetStaticPathsEntry, q as GetStaticPathsExpectedParams, t as GetStaticPathsInvalidRouteParam, P as PageNumberParamNotFound, N as NoMatchingStaticPathFound, u as PrerenderDynamicEndpointPathCollide, v as LocalsNotAnObject, w as ASTRO_VERSION, C as ClientAddressNotAvailable, S as StaticClientAddressNotAvailable, x as renderEndpoint, y as ReservedSlotName, z as renderSlotToString, B as renderJSX, D as chunkToString, F as CantRenderPage, H as renderPage$1, J as REROUTE_DIRECTIVE_HEADER } from './chunks/astro_Jbi09sDw.mjs';
@@ -2205,12 +2205,12 @@ const createExports = (manifest, { middlewareSecret }) => {
 };
 
 const _page0 = () => import('./chunks/generic_Lo2mAiP9.mjs');
-const _page1 = () => import('./chunks/index_er4A0RgK.mjs');
+const _page1 = () => import('./chunks/index_aWk3zzJo.mjs');
 const _page2 = () => import('./chunks/blog_ZqIJgahS.mjs');
 const _page3 = () => import('./chunks/despre_06S_2eum.mjs');
 const _page4 = () => import('./chunks/dinti-ficsi-24h_a9P2EQgm.mjs');
 const _page5 = () => import('./chunks/dsd_T-RRHtBG.mjs');
-const _page6 = () => import('./chunks/echipa_mKVcWvWS.mjs');
+const _page6 = () => import('./chunks/echipa_p9zi-rvb.mjs');
 const _page7 = () => import('./chunks/endodontie_G6V8g98U.mjs');
 const _page8 = () => import('./chunks/estetica_cY88TNMF.mjs');
 const _page9 = () => import('./chunks/fatete-dentare_od0dnpO0.mjs');
@@ -2265,7 +2265,7 @@ const _manifest = Object.assign(manifest, {
     middleware: onRequest
 });
 const _args = {
-    "middlewareSecret": "f9d330ea-142f-46ae-b569-fd78c0794039"
+    "middlewareSecret": "48e50e73-d9f3-4869-96e9-35ec8ff14eca"
 };
 const _exports = createExports(_manifest, _args);
 const __astrojsSsrVirtualEntry = _exports.default;
